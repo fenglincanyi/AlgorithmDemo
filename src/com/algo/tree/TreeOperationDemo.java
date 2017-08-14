@@ -84,7 +84,7 @@ public class TreeOperationDemo {
 
 
     /**
-     * 二叉树的翻转
+     * 二叉树的翻转（镜像）
      */
     public static Node invertTree(Node root) {
         if (root == null) {
