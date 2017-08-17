@@ -26,7 +26,6 @@ public class ListDemo {
             System.out.print(head.value + " ");
             head = head.next;
         }
-
     }
 
 
