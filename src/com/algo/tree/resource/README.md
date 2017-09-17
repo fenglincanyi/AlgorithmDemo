@@ -1,5 +1,5 @@
 说明：
-
+## 二叉树遍历
 ![](treedemo.png)
 
      前序遍历：a b d e f g c
@@ -14,3 +14,11 @@ http://blog.csdn.net/fansongy/article/details/6798278
 http://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html
 
 http://blog.csdn.net/anonymalias/article/details/10897009
+
+
+## 高级
+b树，b+树：
+https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.02.md
+
+红黑树：
+https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md
