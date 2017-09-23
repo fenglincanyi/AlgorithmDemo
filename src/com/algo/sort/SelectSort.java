@@ -4,14 +4,12 @@ package com.algo.sort;
  * Created by geng
  * on 2017/8/15.
  *
- * http://www.cnblogs.com/MOBIN/p/4681369.html
- * http://bubkoo.com/2014/01/14/sort-algorithm/heap-sort/
+ * 选择排序(从无序区中选择最小的，与有序区的最后一个元素 交换)
  */
-public class BubbueSort {
+public class SelectSort {
 
     public static void main(String[] args) {
         int[] arr = {23, 1, 4, 0, 3, 21, 8};
-//        int[] arr = {8, 1, 4, 0, 3, 21, 23};
         sort(arr);
         for (int i=0; i<arr.length; i++) {
             System.out.print(arr[i] + " ");
@@ -20,12 +18,18 @@ public class BubbueSort {
 
     public static void sort(int[] arr) {
         for (int i=0; i<arr.length; i++) {
+            int index=i;
             for (int j=i+1; j<arr.length; j++) {
-                if (arr[i] > arr[j]) {
-                    int tmp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
+                if (arr[index] > arr[j]){
+                    index = j;
                 }
+            }
+
+            // 交换
+            if (arr[index] < arr[i]) {
+                arr[index] = arr[index] ^ arr[i];
+                arr[i] = arr[index] ^ arr[i];
+                arr[index] = arr[index] ^ arr[i];
             }
         }
     }
