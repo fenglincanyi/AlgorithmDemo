@@ -23,7 +23,7 @@ public class TraversalDemo {
 
          */
 
-//        pareTraversal(node);
+//        preTraversal(node);
 //        System.out.println();
 //        midTraversal(node);
 //        System.out.println();
@@ -35,7 +35,7 @@ public class TraversalDemo {
          * 使用非递归方式
          */
 
-//        pareTraversal1(node);
+//        preTraversal1(node);
 //        System.out.println();
 //        midTraversal1(node);
 //        System.out.println();
@@ -87,7 +87,7 @@ public class TraversalDemo {
      * 非递归实现：使用 "栈" 存储节点，进行相关遍历
      */
 
-    public static void pareTraversal1(Node root) {
+    public static void preTraversal1(Node root) {
         Stack<Node> stack = new Stack<>();
         stack.push(root);
 
