@@ -1,4 +1,4 @@
-package com.algo.sort;
+package com.algo.sort.swap;
 
 /**
  * Created by geng

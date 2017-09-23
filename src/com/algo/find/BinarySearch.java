@@ -3,6 +3,8 @@ package com.algo.find;
 /**
  * Created by geng
  * on 2017/9/7.
+ *
+ * 2种实现思路：循环 / 递归：注意结束的边界
  */
 public class BinarySearch {
 

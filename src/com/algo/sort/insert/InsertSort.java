@@ -1,4 +1,4 @@
-package com.algo.sort;
+package com.algo.sort.insert;
 
 /**
  * Created by geng
@@ -26,6 +26,14 @@ public class InsertSort {
             arr[j+1] = tmp;
         }
     }
+
+    /**
+     * 插入排序优化：   折半插入排序
+     *
+     * 对查找 插入的位置进行 二分查找
+     */
+
+
 
     public static void print(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
