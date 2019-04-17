@@ -22,3 +22,6 @@ https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/z
 
 红黑树：
 https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md
+
+HashMap & 红黑树:
+https://juejin.im/post/5c973baef265da60e17d02f2?utm_source=gold_browser_extension
