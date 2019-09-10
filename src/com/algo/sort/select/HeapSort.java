@@ -15,7 +15,7 @@ public class HeapSort {
     }
 
     /*堆的筛选算法*/
-    public static void sift(int[] arr, int start, int end) {
+    public static void shift(int[] arr, int start, int end) {
         int i = start;
         for (int j = 2 * i + 1; j <= end; j = 2 * j + 1) {// 重复操作至叶节点
             if (j < end && arr[j] < arr[j + 1]) {// 选出孩子节点最大的，后面来比较
@@ -34,11 +34,11 @@ public class HeapSort {
     /*堆排序*/
     public static void heapSort(int[] arr) {
         for (int i = arr.length / 2; i >= 0; i--) {// 初始建堆，完全二叉树，只需从  n/2 中间节点处开始，向上
-            sift(arr, i, arr.length - 1);
+            shift(arr, i, arr.length - 1);
         }
         for (int i = arr.length - 1; i > 0; i--) {// 根节点和每次最后一个节点交换
             swap(arr, 0, i);
-            sift(arr, 0, i - 1);
+            shift(arr, 0, i - 1);
         }
     }
 

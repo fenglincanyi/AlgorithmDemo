@@ -53,13 +53,13 @@ public class TraversalDemo {
     /**
      * 递归实现
      */
-    public static void pareTraversal(Node root) {
+    public static void preTraversal(Node root) {
         if (root == null) {
             return;
         }
         System.out.print(root.value + " ");
-        pareTraversal(root.left);
-        pareTraversal(root.right);
+        preTraversal(root.left);
+        preTraversal(root.right);
     }
 
     public static void midTraversal(Node root) {
@@ -135,17 +135,17 @@ public class TraversalDemo {
      */
     public static void postTraversal1(Node root) {
         Stack<Node> stack = new Stack<>();
-        Node curNode, preNode = null;
+        Node curNode, lastNode = null;// 当前节点，上一个节点
         stack.push(root);
 
         while (!stack.isEmpty()) {
             curNode = stack.peek();
 
             if ((curNode.left == null && curNode.right == null)
-                    || (preNode != null && (preNode == curNode.left || preNode == curNode.right))) {
+                    || (lastNode != null && (lastNode == curNode.left || lastNode == curNode.right))) {
                 System.out.print(curNode.value + " ");
                 stack.pop();
-                preNode = curNode;
+                lastNode = curNode;
             } else {
                 if (curNode.right != null) {
                     stack.push(curNode.right);
