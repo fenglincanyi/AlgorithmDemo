@@ -1,5 +1,7 @@
 package com.algo.base.tree;
 
+import java.util.Stack;
+
 /**
  * Created by geng
  * on 2017/8/14.
@@ -114,18 +116,42 @@ public class TreeOperationDemo {
     /**
      * 二叉树的翻转（镜像）
      */
-    public static Node invertTree(Node root) {
-        if (root == null) {
-            return null;
+//    public static Node invertTree(Node root) {
+//        if (root == null) {
+//            return null;
+//        }
+//
+//        Node tmp = root.left;
+//        root.left = root.right;
+//        root.right = tmp;
+//
+//        root.left = invertTree(root.left);
+//        root.right = invertTree(root.right);
+//
+//        return root;
+//    }
+
+    /**
+     * 二叉树的翻转（镜像） 非递归
+     */
+    public static Node invertTree1(Node root) {
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            Node node = stack.pop();
+
+            Node tmp = node.right;
+            node.right = node.left;
+            node.left = tmp;
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
         }
-
-        root.left = invertTree(root.left);
-        root.right = invertTree(root.right);
-
-        Node tmp = root.left;
-        root.left = root.right;
-        root.right = tmp;
-
         return root;
     }
 }
