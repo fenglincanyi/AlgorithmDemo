@@ -27,7 +27,7 @@ public class StrConvertNumber {
         for (int i = 0; i < str.length(); i++) {
             c = str.charAt(i);
             if (c < '0' || c > '9') {// 不是数字
-                return Integer.MIN_VALUE;
+                return 0;
             } else {
                 num = num * 10 + (c - '0');
             }

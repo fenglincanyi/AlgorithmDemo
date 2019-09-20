@@ -7,7 +7,7 @@ package com.algo.base.array;
 public class MaxSubArraySum {
 
     public static void main(String[] args) {
-//        int[] arr = {4, 0, -1, -9, 9, 4, -8, 9, 20, 2};
+//        int[] arr = {4, 0, -1, , 20, -9, 9, 4, -8, 92};
 //        int[] arr = {4, 2, -1, -2};
         int[] arr = {-1, -1, 0, -2, -3};
         getSubArrayMax(arr);
@@ -17,6 +17,8 @@ public class MaxSubArraySum {
 
     /**
      * 最大子数组和
+     *
+     * 求一个连续的区间的最大值
      *
      * 如果要求 位置区间，可加入 start,end, 否则可忽略
      */
