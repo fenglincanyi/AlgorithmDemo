@@ -85,6 +85,8 @@ public class TraversalDemo {
 
     /**
      * 非递归实现：使用 "栈" 存储节点，进行相关遍历
+     *
+     * 深度遍历
      */
 
     public static void preTraversal1(Node root) {
