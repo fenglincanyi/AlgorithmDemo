@@ -4,6 +4,8 @@ package com.algo.base.sort.insert;
  * Created by geng
  * on 2017/9/23.
  * 希尔排序
+ *
+ * 相当于给 插入排序的外层套了一次 分组（d / 2, d>=1）
  */
 public class ShellSort {
 

@@ -12,7 +12,7 @@ public class NumberCountOne {
     }
 
     /**
-     * 统计一个 树 转换成 2进制 后， 1的个数
+     * 统计一个 数 转换成 2进制 后， 1的个数
      */
     public static int countOne(int n) {
         int count = 0;
